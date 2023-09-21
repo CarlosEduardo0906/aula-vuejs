@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/Vue/JS/vue.js"></script>
+    <title>Projeto VUEJS</title>
+</head>
+<body>
+    <h1>AULA VUEJS</h1>
+    <div id="app">
+       Mensagem: <b>{{ mensagem }}</b><br>
+        Valor Total: <b>{{ valortotal }}</b><br>
+       Logado: <b>{{ logado }}</b><br>
+       Hobbies: <b>{{ hobbies[1] }}</b><br>
+
+       Perfil: <b>{{ perfil.nome }}, {{ perfil.cursos[0].nome}}</b><br>
+    </div>
+    
+    <script>
+        options = {
+            el: '#app',
+            data: {
+                mensagem: 'Bem vindos a aula de VUEJS',
+                valortotal: 150.50,
+                logado: true,
+                hobbies: [
+                    'dormir',
+                    'comer',
+                    'cochilar',
+                    'estudar'
+                ],
+                perfil: {
+                    nome: 'Eduardo',
+                    site: 'Em construção',
+                    idade: 22,
+                    sexo: 'masculino',
+                    cursos: [
+                        
+                            {nome: 'bootstrap', cargaHoraria: '50 Horas'},
+                            {nome: 'Vue.js', cargaHoraria: '60 Horas'} 
+
+                    ]
+                }
+            }
+        }
+
+        new Vue(options)
+    </script>
+</body>
+</html>
